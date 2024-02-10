@@ -1,8 +1,9 @@
 {% from "snmp/map.jinja" import snmp with context %}
 
-snmp:
-  pkg.installed:
-    - name: {{ snmp.pkg }}
+include:
+  - .package
+
+snmp_service:
   service.running:
     - name: {{ snmp.service }}
     - enable: true

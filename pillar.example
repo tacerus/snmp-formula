@@ -112,3 +112,18 @@ snmp:
     dlmod:
       - name: 'nstAgentPluginObject'
         sharedobject: '/path/to/nstAgentPluginObject.so'
+
+  trapd:
+    users:
+      myuser:
+        engine: foo1
+        auth_type: sha-512
+        auth_pass: xxx
+        priv_type: aes
+        priv_pass: yyy
+        types:
+          - log
+          - execute
+    handlers:
+      1.3.6.*: /usr/lib/monitoring/myhandler.sh
+    perl: /usr/lib/zabbix/zabbix_trap_receiver.pl

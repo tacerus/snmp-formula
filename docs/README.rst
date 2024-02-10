@@ -85,15 +85,15 @@ Installs the snmp daemon, starts, and enables the associated snmp service.
 
 Configures the snmp daemon.
 
-``snmp.trap``
-^^^^^^^^^^^^^
+``snmp.trap``, ``snmp.trapd``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Starts and enables the trap service.
+Starts, enables, and configures the trap service.
 
 ``snmp.conftrap``
 ^^^^^^^^^^^^^^^^^
 
-Configures the trap service.
+Configures the trap service. Includes `snmp.trap`.
 
 ``snmp.options``
 ^^^^^^^^^^^^^^^^
